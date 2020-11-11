@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+
+  #
+  # https://hub.docker.com/r/typo3gmbh/php72
+  #
+  php:
+    image: typo3gmbh/php72
+    depends_on:
+      - database
+    volumes:
+      - ./:/opt/project/
+      - ~/.composer/cache:/root/.composer/cache
+    environment:
+      typo3DatabaseName: typo3
+      typo3DatabaseUsername: root
+      typo3DatabaseHost: database
+    working_dir: /opt/project/
+
+  #
+  # https://hub.docker.com/_/mariadb/
+  #
+  database:
+    image: mariadb:10.2
+    environment:
+      MYSQL_DATABASE: typo3
+      MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'

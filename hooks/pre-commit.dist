@@ -1,0 +1,21 @@
+#!/usr/bin/env php
+<?php
+
+echo "Running tests.. ";
+exec(
+    'docker-compose run php .Build/bin/phpunit -c .Build/web/typo3conf/ext/' . \Xima\{{ExtKeyNamespace}}\Configuration::EXT_KEY . '/Tests/Unit/UnitTests.xml',
+    $output,
+    $returnCode
+);
+
+if ($returnCode !== 0) {
+    // Show full output
+    echo PHP_EOL . implode($output, PHP_EOL) . PHP_EOL;
+    echo "Aborting commit.." . PHP_EOL;
+    exit(1);
+}
+
+// Show summary (last line)
+echo $output . PHP_EOL;
+
+exit(0);

@@ -1,0 +1,24 @@
+<?php declare(strict_types=1);
+
+namespace Xima\{{ExtKeyNamespace}};
+
+
+/**
+ * Class Configuration
+ *
+ * This file contains global configurations like constants and static methods for usage in whole extension.
+ *
+ * @package Xima\{{ExtKeyNamespace}}\Service
+ */
+class Configuration
+{
+
+    const EXT_KEY = '{{EXTKEY}}';
+
+    /**
+     * Cache
+     */
+    const CACHE_IDENTIFIER = '{{ExtKeyNamespace}}Cache';
+    const CACHE_LIFETIME = 86400;
+
+}

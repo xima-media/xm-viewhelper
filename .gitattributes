@@ -1,0 +1,7 @@
+# Folders
+./Tests/ export-ignore
+./hooks/ export-ignore
+
+# Files
+./.gitignore export-ignore
+./.gitattributes export-ignore
