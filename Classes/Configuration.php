@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-namespace Xima\{{ExtKeyNamespace}};
+namespace Xima\XmViewhelper;
 
 
 /**
@@ -8,12 +8,13 @@ namespace Xima\{{ExtKeyNamespace}};
  *
  * This file contains global configurations like constants and static methods for usage in whole extension.
  *
- * @package Xima\{{ExtKeyNamespace}}\Service
+ * @package Xima\XmViewhelper
  */
 class Configuration
 {
 
-    const EXT_KEY = '{{EXTKEY}}';
+    const EXT_NAME = 'XmViewhelper';
+    const EXT_KEY = 'xm_viewhelper';
 
     /**
      * Cache

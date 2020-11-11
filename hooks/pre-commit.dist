@@ -1,9 +1,10 @@
 #!/usr/bin/env php
 <?php
+use Xima\XmViewhelper\Configuration;
 
 echo "Running tests.. ";
 exec(
-    'docker-compose run php .Build/bin/phpunit -c .Build/web/typo3conf/ext/' . \Xima\{{ExtKeyNamespace}}\Configuration::EXT_KEY . '/Tests/Unit/UnitTests.xml',
+    'docker-compose run php .Build/bin/phpunit -c .Build/web/typo3conf/ext/' . Configuration::EXT_KEY . '/Tests/Unit/UnitTests.xml',
     $output,
     $returnCode
 );
