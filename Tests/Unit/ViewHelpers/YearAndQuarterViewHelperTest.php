@@ -9,7 +9,7 @@ use Xima\XmViewhelper\ViewHelpers\YearAndQuarterViewHelper;
  * Class YearAndQuarterViewHelperTest
  *
  */
-class YearAndQuarterViewHelperTest extends \Nimut\TestingFramework\TestCase\ViewHelperBaseTestcase
+class YearAndQuarterViewHelperTest extends ViewHelperBaseTestcase
 {
     /**
      * @var \PHPUnit_Framework_MockObject_MockObject
