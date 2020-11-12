@@ -4,11 +4,11 @@ namespace Xima\XmViewhelper\ViewHelpers;
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
- * Class YearViewHelper
+ * Class YearAndQuarterViewHelper
  *
  * @package Vendor\Project\ViewHelpers
  */
-class YearViewHelper extends AbstractViewHelper
+class YearAndQuarterViewHelper extends AbstractViewHelper
 {
     /**
      * Outputs the current year and quarter as a string
