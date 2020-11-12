@@ -1,6 +1,6 @@
-# TYPO3 Extension *xm_viewhelper*
+# TYPO3 Extension *xm-viewhelper*
 
-Collection of viewhelper for the TYPO3 CMS.
+Collection of ViewHelper for the TYPO3 CMS created by XIMA MEDIA GmbH.
 
 ## Installation
 
