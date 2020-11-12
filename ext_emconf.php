@@ -2,7 +2,7 @@
 
 /** @var string $_EXTKEY */
 $EM_CONF[$_EXTKEY] = [
-    'title'            => 'xm-viewhelper',
+    'title'            => 'XIMA ViewHelper',
     'description'      => 'Collection of TYPO3 ViewHelper by XIMA MEDIA GmbH.',
     'category'         => 'plugin',
     'author'           => 'Tony Lampel',
