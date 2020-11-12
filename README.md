@@ -1,4 +1,4 @@
-# TYPO3 Extension *xm_viewhelper*
+# TYPO3 Extension *xm-viewhelper*
 ![ddev logo](Resources/Public/xm-viewhelper-100.png)
 
 Collection of ViewHelper for the TYPO3 CMS created by XIMA MEDIA GmbH.
