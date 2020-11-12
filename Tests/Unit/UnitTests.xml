@@ -1,0 +1,30 @@
+<phpunit
+        backupGlobals="true"
+        backupStaticAttributes="false"
+        bootstrap="../../.Build/vendor/nimut/testing-framework/res/Configuration/UnitTestsBootstrap.php"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertWarningsToExceptions="true"
+        forceCoversAnnotation="false"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        verbose="true"
+        beStrictAboutTestsThatDoNotTestAnything="false"
+>
+    <testsuite name="EXT:xm_viewhelper tests">
+        <directory>../../Tests/Unit/</directory>
+    </testsuite>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../../Classes/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-clover" target="../../.Build/log/phpunit.coverage.xml"/>
+        <log type="junit" target="../../.Build/log/phpunit.report.xml"/>
+        <log type="testdox-html" target="../../.Build/log/testdox.html"/>
+    </logging>
+</phpunit>
