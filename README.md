@@ -1,4 +1,5 @@
 # TYPO3 Extension *xm_viewhelper*
+![ddev logo](Resources/Public/xm-viewhelper-100.png)
 
 Collection of viewhelper for the TYPO3 CMS.
 
