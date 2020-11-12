@@ -16,10 +16,4 @@ class Configuration
     const EXT_NAME = 'XmViewhelper';
     const EXT_KEY = 'xm_viewhelper';
 
-    /**
-     * Cache
-     */
-    const CACHE_IDENTIFIER = '{{ExtKeyNamespace}}Cache';
-    const CACHE_LIFETIME = 86400;
-
 }
