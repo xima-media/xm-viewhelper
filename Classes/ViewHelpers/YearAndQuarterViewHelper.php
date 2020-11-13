@@ -6,6 +6,8 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class YearAndQuarterViewHelper
  *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki
+ *
  * @package Vendor\Project\ViewHelpers
  */
 class YearAndQuarterViewHelper extends AbstractViewHelper
