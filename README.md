@@ -7,11 +7,11 @@ Collection of ViewHelper for the TYPO3 CMS created by XIMA MEDIA GmbH.
 
 Installation via [Composer](https://getcomposer.org/) and [package source].
 
-The extension namespace needs to be added to a template before the available ViewHelper can be used.
+The extension namespace needs to be added to a template before the available ViewHelper can be used. You can ommit the attribut _data-namespace-typo3-fluid_ if you need the html tag to be rendered.
 
 ```html
-<!DOCTYPE html>
-{namespace xmvh=Xima\XmViewhelper\ViewHelpers}
+<html xmlns:xmvh="http://typo3.org/ns/Xima/XmViewhelper/ViewHelpers"
+      data-namespace-typo3-fluid="true">
 ```
 
 ## Configuration
