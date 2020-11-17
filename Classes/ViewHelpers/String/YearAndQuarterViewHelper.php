@@ -8,7 +8,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  * @see https://github.com/xima-media/xm-viewhelper/wiki
  *
- * @package Vendor\Project\ViewHelpers
+ * @package Xima\XmViewhelper\ViewHelpers\String
  */
 class YearAndQuarterViewHelper extends AbstractViewHelper
 {
