@@ -1,9 +1,8 @@
 <?php
-
-namespace Xima\XmViewhelper\Tests\Unit\ViewHelpers\String;
+namespace Xima\XmViewhelper\Tests\Unit\ViewHelpers\Strings;
 
 use TYPO3Fluid\Fluid\Tests\Unit\ViewHelpers\ViewHelperBaseTestcase;
-use Xima\XmViewhelper\ViewHelpers\YearAndQuarterViewHelper;
+use Xima\XmViewhelper\ViewHelpers\Strings\YearAndQuarterViewHelper;
 
 /**
  * Class YearAndQuarterViewHelperTest

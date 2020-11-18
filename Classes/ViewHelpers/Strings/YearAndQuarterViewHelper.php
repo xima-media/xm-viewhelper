@@ -1,5 +1,5 @@
 <?php
-namespace Xima\XmViewhelper\ViewHelpers\String;
+namespace Xima\XmViewhelper\ViewHelpers\Strings;
 
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
@@ -8,12 +8,13 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  * @see https://github.com/xima-media/xm-viewhelper/wiki
  *
- * @package Vendor\Project\ViewHelpers
+ * @package Xima\XmViewhelper\ViewHelpers\Strings
+ * @author Tony Lampel <tony.lampel@xima.de>
  */
 class YearAndQuarterViewHelper extends AbstractViewHelper
 {
     /**
-     * Outputs the current year and quarter as a string
+     * Outputs the current year and quarter as a string.
      *
      * @return string
      */
