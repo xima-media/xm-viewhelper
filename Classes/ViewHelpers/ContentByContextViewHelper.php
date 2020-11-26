@@ -3,6 +3,8 @@ namespace Xima\XmViewhelper\ViewHelpers;
 
 use FluidTYPO3\Vhs\ViewHelpers\Render\AbstractRenderViewHelper;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
+use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
 
 /**
  * Class ContentByContextViewHelper
@@ -20,7 +22,7 @@ class ContentByContextViewHelper extends AbstractRenderViewHelper
     public function initializeArguments()
     {
         $this->registerArgument('partial1', 'string',
-            'Path to partial if context matches', false);
+            'Path to partial if context matches', true);
         $this->registerArgument('variables', 'array',
             'Array of template variables', false);
         $this->registerArgument('partial2', 'string',
@@ -42,10 +44,23 @@ class ContentByContextViewHelper extends AbstractRenderViewHelper
         $partial2 = $this->arguments['partial2'];
         $contexts = (array) $this->arguments['contexts'];
 
-        // Todo: Global Typoscript settings for partial2 and contexts
+        /** @var ConfigurationManager configurationManager */
+        $configurationManager = GeneralUtility::makeInstance(ConfigurationManager::class);
+        $extbaseFrameworkConfiguration = $configurationManager
+            ->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
+
+        $settings = $extbaseFrameworkConfiguration['plugin.']['tx_xmviewhelper.']['settings.'];
+
+        if (empty($partial2)) {
+            $partial2 = $settings['partial2'];
+        }
+
+        if (empty($contexts)) {
+            $contexts = $settings['contexts'];
+        }
 
         $context = GeneralUtility::getApplicationContext()->__toString();
-        $partial = (in_array($context, $contexts))? $partial1 : $partial2;
+        $partial = (in_array($context, $contexts)) ? $partial1 : $partial2;
 
         $partial = GeneralUtility::getFileAbsFileName($partial);
         $view = static::getPreparedView();
