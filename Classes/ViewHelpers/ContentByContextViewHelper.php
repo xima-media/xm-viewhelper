@@ -49,7 +49,7 @@ class ContentByContextViewHelper extends AbstractRenderViewHelper
         $extbaseFrameworkConfiguration = $configurationManager
             ->getConfiguration(ConfigurationManagerInterface::CONFIGURATION_TYPE_FULL_TYPOSCRIPT);
 
-        $settings = $extbaseFrameworkConfiguration['plugin.']['tx_xmviewhelper.']['settings.'];
+        $settings = $extbaseFrameworkConfiguration['plugin.']['tx_xmviewhelper.']['settings.']['contentByContext.'];
 
         if (empty($partial2)) {
             $partial2 = $settings['partial2'];
