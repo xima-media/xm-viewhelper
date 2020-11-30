@@ -22,13 +22,13 @@ class ContentByContextViewHelper extends AbstractRenderViewHelper
     public function initializeArguments()
     {
         $this->registerArgument('partial1', 'string',
-            'Path to partial if context matches', true);
+            'Path to default partial for default context', true);
         $this->registerArgument('variables', 'array',
             'Array of template variables', false);
         $this->registerArgument('partial2', 'string',
-            'Path to partial if context does not match', false);
+            'Path to partial if context negation matches', false);
         $this->registerArgument('contexts', 'array',
-            'Array of contexts', false);
+            'Array of contexts negations like Production/Standby', false);
     }
 
     /**
@@ -60,7 +60,7 @@ class ContentByContextViewHelper extends AbstractRenderViewHelper
         }
 
         $context = GeneralUtility::getApplicationContext()->__toString();
-        $partial = (in_array($context, $contexts)) ? $partial1 : $partial2;
+        $partial = (in_array($context, $contexts)) ? $partial2 : $partial1;
 
         $partial = GeneralUtility::getFileAbsFileName($partial);
         $view = static::getPreparedView();
