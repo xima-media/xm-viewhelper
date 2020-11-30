@@ -31,6 +31,22 @@ The extension namespace needs to be added to a template before the available Vie
       data-namespace-typo3-fluid="true">
 ```
 
+## Configuration
+
+The following TypoScript setup can be used to configure the corresponding ViewHelpers.
+
+```typo3_typoscript
+plugin.tx_xmviewhelper {
+    settings {
+        contentByContext {
+            partial2 = EXT:xm_viewhelper/Resources/Private/Partials/ContentByContext/Partial2.html
+            contexts {
+            }
+        }
+    }
+}
+```
+
 ## Documentation
 
 The repository [Wiki](https://github.com/xima-media/xm-viewhelper/wiki) contains a list of available ViewHelpers and detailed descriptions of their purpose and use.
