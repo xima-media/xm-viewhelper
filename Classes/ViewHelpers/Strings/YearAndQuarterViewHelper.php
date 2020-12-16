@@ -6,7 +6,11 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class YearAndQuarterViewHelper
  *
- * @see https://github.com/xima-media/xm-viewhelper/wiki
+ * Outputs the current year and quarter as a string.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/YearAndQuarterViewHelper
+ *
+ * @example {xmvh:strings.yearAndQuarter()}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Strings
  * @author Tony Lampel <tony.lampel@xima.de>
@@ -14,7 +18,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 class YearAndQuarterViewHelper extends AbstractViewHelper
 {
     /**
-     * Outputs the current year and quarter as a string.
+     * Year and quarter
      *
      * @return string
      */

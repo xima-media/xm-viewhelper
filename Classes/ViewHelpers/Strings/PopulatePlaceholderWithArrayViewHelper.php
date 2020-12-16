@@ -6,7 +6,12 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class PopulatePlaceholderWithArrayViewHelper
  *
- * @see https://github.com/xima-media/xm-viewhelper/wiki
+ * Populates a text containing {{placeholders}} with the corresponding values
+ * from a given array.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/PopulatePlaceholderWithArrayViewHelper
+ *
+ * @example {xmvh:strings.populatePlaceholderWithArray(text: '', array: array)}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Strings
  * @author Tony Lampel <tony.lampel@xima.de>
@@ -25,8 +30,7 @@ class PopulatePlaceholderWithArrayViewHelper extends AbstractViewHelper
     }
 
     /**
-     * Populates a text containing {{placeholders}} with the corresponding values
-     * from a given array.
+     * Populates placeholder with array
      *
      * @return mixed
      */

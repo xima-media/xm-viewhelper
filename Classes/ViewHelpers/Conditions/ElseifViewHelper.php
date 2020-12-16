@@ -6,7 +6,11 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class ElseifViewHelper
  *
- * @see https://github.com/xima-media/xm-viewhelper/wiki
+ * Returns a conclusion according to the given conditions.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/ElseifViewHelper
+ *
+ * @example {xmvh:conditions.elseif(condition1: '', condition2: '', conclusion1: '', conclusion2: '')}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Strings
  * @author Tony Lampel <tony.lampel@xima.de>
@@ -31,7 +35,7 @@ class ElseifViewHelper extends AbstractViewHelper
     }
 
     /**
-     * Returns a conclusion regarding the given conditions.
+     * Elseif
      *
      * @return string
      */

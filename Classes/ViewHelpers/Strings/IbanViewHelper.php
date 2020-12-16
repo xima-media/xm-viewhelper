@@ -6,7 +6,11 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class IbanViewHelper
  *
- * @see https://github.com/xima-media/xm-viewhelper/wiki
+ * Outputs a chunked easier to read iban string.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/IbanViewHelper
+ *
+ * @example {xmvh:strings.iban(iban: '')}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Strings
  * @author Tony Lampel <tony.lampel@xima.de>
@@ -14,7 +18,7 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 class IbanViewHelper extends AbstractViewHelper
 {
     /**
-     * Outputs a chunked iban string.
+     * Iban
      *
      * @param $iban string
      * @return string

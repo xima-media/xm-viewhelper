@@ -6,6 +6,12 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class ArrayFromDelimiterStringViewHelper
  *
+ * Outputs an array from a given string containing delimiters.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/ArrayFromDelimiterStringViewHelper
+ *
+ * @example {xmvh:arrays.arrayFromDelimiterString(string: '', delimiter: '')}
+ *
  * @package Xima\XmViewhelper\ViewHelpers\Arrays
  * @author Tony Lampel <tony.lampel@xima.de>
  */
@@ -25,7 +31,7 @@ class ArrayFromDelimiterStringViewHelper extends AbstractViewHelper
     }
 
     /**
-     * Outputs an array from a given string containing delimiters.
+     * Array from delimiter string
      *
      * @return mixed
      * @throws \Exception

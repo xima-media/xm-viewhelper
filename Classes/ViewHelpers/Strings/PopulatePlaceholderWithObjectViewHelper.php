@@ -6,7 +6,12 @@ use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 /**
  * Class PopulatePlaceholderWithObjectViewHelper
  *
- * @see https://github.com/xima-media/xm-viewhelper/wiki
+ * Populates a text containing {{placeholders}} with the corresponding values
+ * from a given object.
+ *
+ * @see https://github.com/xima-media/xm-viewhelper/wiki/PopulatePlaceholderWithObjectViewHelper
+ *
+ * @example {xmvh:strings.populatePlaceholderWithObject(text: '', object: object)}
  *
  * @package Xima\XmNnfdavPortal\ViewHelpers
  * @author Steve Lenz <steve.lenz@xima.de>
@@ -26,8 +31,7 @@ class PopulatePlaceholderWithObjectViewHelper extends AbstractViewHelper
     }
 
     /**
-     * Populates a text containing {{placeholders}} with the corresponding values
-     * from a given object.
+     * Populate placeholder with object
      *
      * @return mixed|string|string[]
      * @throws \ReflectionException
