@@ -1,5 +1,5 @@
 <?php
-namespace Xima\XmViewhelper\ViewHelpers\Strings;
+namespace Xima\XmViewhelper\ViewHelpers\String;
 
 use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
 
