@@ -6,6 +6,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.x.x]
+### Added
+- IbanViewHelper
+- PopulatePlaceholderWithObjectViewHelper
+- PopulatePlaceholderWithArrayViewHelper
+- ArrayFromDelimiterStringViewHelper
+- ElseifViewHelper
+- ContextMatchesViewHelper
+- CategoriesViewHelper
+- Dependency xm_tools
+
 ## [1.4.0] - 2021-02-03
 ### Added
 - ContextMatchesViewHelper
@@ -28,6 +39,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ### Changed
 - organized setup by ViewHelper
+
+## [3.0.0] - 2020-11-17
+### Added
+- YearAndQuarterViewHelper
 
 ## [1.2.0] - 2020-11-18
 ### Added
