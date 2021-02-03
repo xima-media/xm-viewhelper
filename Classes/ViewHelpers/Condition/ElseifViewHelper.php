@@ -1,7 +1,7 @@
 <?php
 namespace Xima\XmViewhelper\ViewHelpers\Condition;
 
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class ElseifViewHelper
@@ -20,7 +20,7 @@ class ElseifViewHelper extends AbstractViewHelper
     /**
      * Arguments Initialization
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('condition1', 'boolean',
             'First condition', true);

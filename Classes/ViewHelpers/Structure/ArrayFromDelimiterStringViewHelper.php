@@ -1,7 +1,7 @@
 <?php
 namespace Xima\XmViewhelper\ViewHelpers\Structure;
 
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class ArrayFromDelimiterStringViewHelper
@@ -20,7 +20,7 @@ class ArrayFromDelimiterStringViewHelper extends AbstractViewHelper
     /**
      * Arguments Initialization
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('string', 'string',
             'String to be parsed.', true);

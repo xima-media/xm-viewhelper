@@ -1,7 +1,7 @@
 <?php
 namespace Xima\XmViewhelper\ViewHelpers\String;
 
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class PopulatePlaceholderWithArrayViewHelper
@@ -22,7 +22,7 @@ class PopulatePlaceholderWithArrayViewHelper extends AbstractViewHelper
     /**
      * Arguments Initialization
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('text', 'string',
             'String containing placeholder.', true);

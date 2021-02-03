@@ -4,7 +4,7 @@ namespace Xima\XmViewhelper\ViewHelpers;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
-use TYPO3\CMS\Fluid\Core\ViewHelper\AbstractViewHelper;
+use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 /**
  * Class ContextMatchesViewHelper
@@ -23,7 +23,7 @@ class ContextMatchesViewHelper extends AbstractViewHelper
     /**
      * Arguments Initialization
      */
-    public function initializeArguments()
+    public function initializeArguments(): void
     {
         $this->registerArgument('contexts', 'array',
             'Array of contexts like Production/Standby', false);
