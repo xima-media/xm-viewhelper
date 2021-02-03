@@ -5,12 +5,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.4.0] - 2021-02-03
 ### Added
 - ContextMatchesViewHelper
 - examples and wiki links to PHP doc annotation
 
 ### Removed
 - ContentByContextViewHelper
+- html partial
+
+### Changed
+- refactored foldor structure and namespaces
 
 ## [1.3.1] - 2020-11-30
 ### Changed
