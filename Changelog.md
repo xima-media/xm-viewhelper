@@ -15,7 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 - ElseifViewHelper
 - ContextMatchesViewHelper
 - CategoriesViewHelper
-- Dependency xm_tools
+- Category model and Repository
 
 ## [1.4.0] - 2021-02-03
 ### Added
