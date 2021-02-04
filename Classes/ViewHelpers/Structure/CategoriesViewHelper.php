@@ -3,10 +3,9 @@ namespace Xima\XmViewhelper\ViewHelpers\Structure;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Object\ObjectManager;
-use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 use TYPO3Fluid\Fluid\Core\ViewHelper\Traits\CompileWithRenderStatic;
-use Xima\XmTools\Domain\Repository\CategoryRepository;
+use Xima\XmViewhelper\Domain\Repository\CategoryRepository;
 
 /**
  * Class CategoriesViewHelper
@@ -31,23 +30,21 @@ class CategoriesViewHelper extends AbstractViewHelper
     }
 
     /**
-     * @param array $arguments
-     * @param \Closure $renderChildrenClosure
-     * @param RenderingContextInterface $renderingContext
-     * @return array|mixed
+     * @return mixed
      */
-    public static function renderStatic(
-        array $arguments,
-        \Closure $renderChildrenClosure,
-        RenderingContextInterface $renderingContext
-    ) {
+    public function render()
+    {
         $objectManager = GeneralUtility::makeInstance(ObjectManager::class);
-        $catRepo = $objectManager->get(CategoryRepository::class);
+        /** @var CategoryRepository $categoryRepo */
+        $categoryRepo = $objectManager->get(CategoryRepository::class);
+        $table = $this->arguments['table'];
+        $field = $this->arguments['field'];
+        $uid = $this->arguments['uid'];
 
-        $categories = $catRepo->findByTableAndFieldname(
-            $arguments['table'],
-            $arguments['field'],
-            $arguments['uid']
+        $categories = $categoryRepo->findByTableAndFieldname(
+            $table,
+            $field,
+            $uid
         );
 
         return $categories;
