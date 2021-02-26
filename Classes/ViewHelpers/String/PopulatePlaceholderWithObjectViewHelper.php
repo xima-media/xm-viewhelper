@@ -42,7 +42,12 @@ class PopulatePlaceholderWithObjectViewHelper extends AbstractViewHelper
         $endDelimiter = '}}';
         $text = $this->arguments['text'];
         $object = $this->arguments['object'];
-        $reflection = new \ReflectionClass($object);
+
+        try {
+            $reflection = new \ReflectionClass($object);
+        } catch(\ReflectionException $e) {
+            return $text;
+        }
         $properties = $reflection->getProperties();
 
         /** @var \ReflectionProperty $property */
