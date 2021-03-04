@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [3.1.1] - 2021-03-04
+### Changed
+- try and catch reflection in PopulatePlaceholderWithObjectViewHelper
+- composer.json contains TYPO3 extension key
+
 ## [3.1.0] - 2021-02-26
 ### Added
 - IbanViewHelper
