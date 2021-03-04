@@ -51,6 +51,7 @@
   },
   "extra": {
     "typo3/cms": {
+      "extension-key": "xm_viewhelper",
       "cms-package-dir": "{$vendor-dir}/typo3/cms",
       "web-dir": "web"
     }
