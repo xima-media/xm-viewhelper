@@ -13,15 +13,29 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 class YearAndQuarterViewHelper extends AbstractViewHelper
 {
     /**
-     * Outputs the current year and quarter as a string
+     * Arguments Initialization
+     */
+    public function initializeArguments(): void
+    {
+        $this->registerArgument('date', 'DateTime',
+            'DateTime object.', false);
+    }
+
+    /**
+     * Outputs the year and quarter as a string
+     * Of a given DateTime object or the current time
      *
      * @return string
      */
     public function render()
     {
-        $currentMonth = date("m", time());
+        /** @var \DateTime $date */
+        $date = $this->arguments['date'];
+
+        $currentMonth = ($date) ? $date->format('m') : date('m', time());
+        $year = ($date) ? $date->format('Y') : date('Y');
+
         $currentQuarter = ceil($currentMonth/3);
-        $year = date('Y');
 
         return $year . ' Q' . $currentQuarter;
     }
