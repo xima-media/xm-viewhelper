@@ -10,7 +10,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  * @see https://github.com/xima-media/xm-viewhelper/wiki/ArrayFromDelimiterStringViewHelper
  *
- * @example {xmvh:arrays.arrayFromDelimiterString(string: '', delimiter: '')}
+ * @example {xmvh:structure.arrayFromDelimiterString(string: '', delimiter: '')}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Arrays
  * @author Tony Lampel <tony.lampel@xima.de>
