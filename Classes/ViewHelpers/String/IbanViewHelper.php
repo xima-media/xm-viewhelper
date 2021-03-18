@@ -10,7 +10,7 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
  *
  * @see https://github.com/xima-media/xm-viewhelper/wiki/IbanViewHelper
  *
- * @example {xmvh:strings.iban(iban: '')}
+ * @example {xmvh:string.iban(iban: '')}
  *
  * @package Xima\XmViewhelper\ViewHelpers\Strings
  * @author Tony Lampel <tony.lampel@xima.de>
@@ -18,13 +18,21 @@ use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 class IbanViewHelper extends AbstractViewHelper
 {
     /**
+     * Arguments Initialization
+     */
+    public function initializeArguments(): void
+    {
+        $this->registerArgument('iban', 'string',
+            'IBAN', true);
+    }
+    /**
      * Iban
      *
-     * @param $iban string
      * @return string
      */
-    public function render($iban)
+    public function render()
     {
+        $iban = $this->arguments['iban'];
         $rmWhitespaces = preg_replace('/\s+/', '', $iban);
 
         return chunk_split($rmWhitespaces, 4, ' ');
