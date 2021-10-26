@@ -1,0 +1,32 @@
+<html xmlns:xmvh="http://typo3.org/ns/Xima/XmViewhelper/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<f:if condition="!{xmvh:contextMatches(contexts: {0: 'Production'})}">
+    <style>
+        .xm-sitename {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 5px;
+            background: #f0ad4e;
+            color: white;
+            font-size: 12px;
+            padding: 5px;
+            font-family: 'Monaco', monospace;
+            z-index: 99999;
+        }
+        .xm-sitename .xm-sitename-close::before {
+            cursor: pointer;
+            content: "\00d7";
+            opacity: 0.5;
+        }
+        .xm-sitename .xm-sitename-close::before:hover {
+            opacity: 1;
+        }
+    </style>
+
+    <div class="xm-sitename" title="This is part of the feature branch deployment and shows the actual site name of the website. This hint will not be displayed in production context.">
+        <v:site.name />
+        <span class="xm-sitename-close" onclick="this.parentElement.remove()"></span>
+    </div>
+</f:if>
