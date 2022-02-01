@@ -30,8 +30,7 @@
     }
   },
   "replace": {
-    "typo3-ter/xm-viewhelper": "self.version",
-    "xima-media/xm-viewhelper": "self.version"
+    "typo3-ter/xm-viewhelper": "self.version"
   },
   "autoload-dev": {
     "psr-4": {
