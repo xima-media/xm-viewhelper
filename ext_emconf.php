@@ -8,14 +8,10 @@ $EM_CONF[$_EXTKEY] = [
     'author'           => 'Tony Lampel',
     'author_email'     => 'tony.lampel@xima.de',
     'state'            => 'stable',
-    'internal'         => '',
-    'uploadfolder'     => '0',
-    'createDirs'       => '',
-    'clearCacheOnLoad' => 0,
-    'version'          => '3.1.3',
+    'version'          => '3.1.2',
     'constraints'      => [
         'depends'   => [
-            'typo3' => '9.5.0-10.4.99',
+            'typo3' => '9.5.0-11.5.99',
         ],
         'conflicts' => [],
         'suggests'  => [],

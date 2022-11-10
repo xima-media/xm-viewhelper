@@ -1,6 +1,7 @@
 <?php
 namespace Xima\XmViewhelper\ViewHelpers;
 
+use TYPO3\CMS\Core\Core\Environment;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManager;
 use TYPO3\CMS\Extbase\Configuration\ConfigurationManagerInterface;
@@ -50,7 +51,7 @@ class ContextMatchesViewHelper extends AbstractViewHelper
             $contexts = $settings['contexts'];
         }
 
-        $context = GeneralUtility::getApplicationContext()->__toString();
+        $context = (string)Environment::getContext();
 
         return in_array($context, $contexts);
     }
