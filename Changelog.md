@@ -14,6 +14,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 ### Removed
 - ElseifViewHelper
 
+## [3.1.3] - 2021-03-18
+### Added
+- BasenameViewHelper
+
+### Changed
+- IbanViewHelper accepts parameter
+- cleanup and docs
+
 ## [3.1.2] - 2021-03-10
 ### Changed
 - YearAndQuarterViewHelper accepts optional DateTime object parameter
